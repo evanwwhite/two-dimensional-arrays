@@ -6,7 +6,10 @@ import java.util.Scanner;
 public class Arrays2D {
 
 	public static void main(String[] args) throws IOException{
-			
+		
+		int row = 0;
+		int collumn = 0;
+		int[][] data = new int[row][collumn];
 		int counter = 0;
 		
       Scanner input = new Scanner(new File("arrInput.txt"));
@@ -16,25 +19,35 @@ public class Arrays2D {
 		
 		while(input.hasNext())
 		{
-			
+			for(r = 0; r < data.length; r++)
+			  {
+				  for(c = 0; c < data[0].length; c++)
+				    {
+					    data[r][c] = r + c;
+					    data[counter][r] = input.nextInt();
+				    }
+			  }  
+			counter++;
 		}
 		
 		
+		  for(int i = 0; i < rows; i++){  
+	            sumRow = 0;  
+	           for(int j = 0; j < cols; j++){  
+	              sumRow = sumRow + a[i][j];  
+	            }  
+	            System.out.println("Sum of " + (i+1) +" row: " + sumRow);  
+	        }  		
 		
+		  for(int i = 0; i < cols; i++){  
+		          sumCol = 0;  
+		         for(int j = 0; j < rows; j++){  
+		              sumCol = sumCol + a[j][i];  
+		            }  
+		            System.out.println("Sum of " + (i+1) +" column: " + sumCol);  
+		        } 
 		
-		
-		
-		int[][] data = new int[4][6];
 
-		for(r = 0; r < data.length; r++)
-		  {
-			
-			  for(c = 0; c < data[0].length; c++)
-			    {
-				    data[r][c] = r + c;
-				    System.out.print(data[r][c] + " ");
-			    }
-		  }  
 		
 		
 		
